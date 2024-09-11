@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Our Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+    <style>
+        /* CSS Variables for easy theming and maintenance */
+        :root {
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --primary-color: #ff5733;
+            --secondary-color: #ffc300;
+            --background-color: #fff;
+            --footer-background-color: #353535;
+            --text-color: #333;
+            --link-color: #000;
+            --link-hover-color: #ff7f50;
+            --border-color: #d9d9d9;
+            --button-hover-bg: #e03a29;
+            --learn-more-hover-bg: #f0f0f0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 0.5em;
+        }
+
+        /* Header Component */
+        .header {
+            background: var(--background-color);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--link-hover-color);
+        }
+
+        /* Hero Component */
+        .hero {
+            height: 100vh;
+            background: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Component */
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .button-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: var(--button-hover-bg);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        .button-secondary:hover {
+            background: var(--learn-more-hover-bg);
+            transform: translateY(-2px);
+        }
+
+        /* Products Component */
+        .products {
+            padding: 4rem 0;
+        }
+
+        .products-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Product Card Component */
+        .product-card {
+            border: 2px solid var(--border-color);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .product-content {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer Component */
+        .footer {
+            background: var(--footer-background-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" aria-label="Main Navigation">
+                <div class="logo" aria-label="Logo">Our Logo</div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Promo</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Welcome to Our Website!</h1>
+                <p class="hero-description">We are glad to have you here. Explore our offerings!</p>
+                <div class="hero-buttons">
+                    <a href="#" class="button button-primary">Get Started</a>
+                    <a href="#" class="button button-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2 class="products-title">Our Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url(../images/product1.png);"
+                            aria-label="Product 1 Image"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Product 1</h3>
+                            <p class="product-description">Description of Product 1</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url(../images/product2.png);"
+                            aria-label="Product 2 Image"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Product 2</h3>
+                            <p class="product-description">Description of Product 2</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url(../images/product3.png);"
+                            aria-label="Product 3 Image"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Product 3</h3>
+                            <p class="product-description">Description of Product 3</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url(../images/product4.png);"
+                            aria-label="Product 4 Image"></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Product 4</h3>
+                            <p class="product-description">Description of Product 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Our Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for enhanced interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Add animation class to product cards on scroll
+            const productCards = document.querySelectorAll('.product-card');
+            const animateOnScroll = () => {
+                productCards.forEach(card => {
+                    const cardTop = card.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if (cardTop < windowHeight * 0.75) {
+                        card.classList.add('animate');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial check
+        });
+    </script>
+</body>
+
+</html>

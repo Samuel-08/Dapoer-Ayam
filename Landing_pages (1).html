@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dapoer Ayam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #ffd700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navbar nav ul li {
+            margin-left: 20px;
+        }
+
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 300ms ease-out;
+        }
+
+        .navbar nav ul li a:hover {
+            color: red;
+        }
+
+        .navbar nav ul li a.login {
+            background-color: red;
+            color: black;
+            padding: 8px 16px;
+            border: 2px solid black;
+            border-radius: 8px;
+            transition: background-color 300ms ease-out, color 300ms ease-out;
+        }
+
+        .navbar nav ul li a.login:hover {
+            background-color: black;
+            color: red;
+        }
+
+        .hero {
+            background: url("./images/img (1).png") no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            max-height: 460px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero .overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(217, 220, 215, 0.6);
+            max-width: 600px;
+            padding: 20px;
+            color: black;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 300ms ease-out;
+        }
+
+        .btn-danger {
+            background-color: red;
+            color: white;
+        }
+
+        /* example */
+        .btn .btn-danger {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        .about {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .about h2,
+        .about p {
+            line-height: 1.5;
+            padding: 2% 20%;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 300px;
+            padding: 28px 0;
+            scroll-snap-align: start;
+        }
+
+        .card-image img {
+            height: 204px;
+            max-width: 284px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .contact,
+        .social {
+            width: 50%;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 28px;
+        }
+
+        .social-icons a {
+            margin-left: 10px;
+            color: black;
+            transition: color 300ms ease-out;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            .card {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./images/Logo.png" alt="Dapoer Ayam Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Promo</a></li>
+                    <li><a href="#" class="login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="overlay">
+                <h1>Selamat Datang di Dapoer Ayam</h1>
+                <p>Memberikan Hidangan Terbaik Untukmu</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-danger">Lanjutkan</button>
+                    <button class="btn btn-yellow">Order Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>Tentang Dapoer Ayam</h2>
+            <p>
+                Kami sangat antusias dalam menyajikan ayam goreng terlezat dengan perpaduan bumbu yang sempurna
+                dan kulit keemasan yang renyah. Komitmen kami terhadap kualitas dan rasa telah membuat kami
+                menjadi favorit di antara para pecinta ayam.
+            </p>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <div class="card-image"><img src="./images/images (2).png" alt="Paket Santai"></div>
+                <div class="card-title">Paket Santai</div>
+                <div class="card-body">Rp. 60.000</div>
+                <small>2 Potong Ayam Besar + Kentang Goreng</small>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="./images/images (3).png" alt="Paket Kenyang"></div>
+                <div class="card-title">Paket Kenyang</div>
+                <div class="card-body">Rp. 80.000</div>
+                <small>6 Potong Ayam Besar</small>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="./images/images (4).png" alt="Paket Ngemil"></div>
+                <div class="card-title">Paket Ngemil</div>
+                <div class="card-body">Rp. 50.000</div>
+                <small>6 Potong Ayam Kecil Bebas Tulang</small>
+            </div>
+        </section>
+
+        <section class="more-products" id="moreProducts" style="display: none;">
+            <div class="card">
+                <div class="card-image"><img src="./images/images (5).png" alt="Paket Hemat"></div>
+                <div class="card-title">Paket Hemat</div>
+                <div class="card-body">Rp. 70.000</div>
+                <small>4 Potong Ayam Besar + Nasi</small>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="./images/images (6).png" alt="Paket Rame"></div>
+                <div class="card-title">Paket Rame</div>
+                <div class="card-body">Rp. 100.000</div>
+                <small>8 Potong Ayam Besar + Kentang Goreng</small>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="./images/images (6).png" alt="Paket Party"></div>
+                <div class="card-title">Paket Party</div>
+                <div class="card-body">Rp. 150.000</div>
+                <small>12 Potong Ayam Besar + Minuman</small>
+            </div>
+        </section>
+        <button class="btn btn-danger" id="toggleMoreProducts">Lihat yang lain</button>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact">
+                <h2>Temukan Kami</h2>
+                <p>No Telp: 0853-2132-1234</p>
+                <p>Email: DapoerAyam@contactmail.com</p>
+                <p>Alamat: Jl. Soekarno Hatta No.177 RT:19 RW:45</p>
+            </div>
+            <div class="social">
+                <h2>Ikuti Kami</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelector(".cards");
+            const toggleButton = document.getElementById('toggleMoreProducts');
+            const moreProducts = document.getElementById('moreProducts');
+
+            // Handle touch swipe on cards
+            let startX;
+            cards.addEventListener('touchstart', function (e) {
+                startX = e.changedTouches[0].pageX;
+            });
+
+            cards.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            });
+
+            cards.addEventListener('touchend', function (e) {
+                const dist = e.changedTouches[0].pageX - startX;
+                const threshold = 100; // Swipe threshold
+                if (Math.abs(dist) >= threshold) {
+                    cards.scrollLeft += (dist < 0 ? 1 : -1) * cards.offsetWidth;
+                }
+            });
+
+            // Toggle display of more products
+            toggleButton.addEventListener('click', function () {
+                const isHidden = moreProducts.style.display === 'none' || moreProducts.style.display === '';
+                moreProducts.style.display = isHidden ? 'flex' : 'none';
+                toggleButton.textContent = isHidden ? 'Lihat lebih sedikit' : 'Lihat yang lain';
+            });
+        });
+    </script>
+</body>
+
+</html>

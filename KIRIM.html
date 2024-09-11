@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Franchise Ayam Goreng</title>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+     <style>
+          /* General Styles */
+          body {
+               font-family: "Roboto", sans-serif;
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          /* Navbar Styles */
+          .navbar {
+               background-color: #ffc107;
+               padding: 10px 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+          }
+
+          .navbar img {
+               height: 50px;
+          }
+
+          .navbar ul {
+               list-style: none;
+               display: flex;
+               margin: 0;
+               padding: 0;
+          }
+
+          .navbar li {
+               margin: 0 10px;
+          }
+
+          .navbar a {
+               text-decoration: none;
+               color: black;
+               font-weight: bold;
+          }
+
+          .login-btn {
+               background-color: #ff3d00;
+               color: white;
+               padding: 5px 15px;
+               border: none;
+               border-radius: 5px;
+               cursor: pointer;
+          }
+
+          /* Content Styles */
+          .content {
+               padding: 40px 20px;
+               text-align: center;
+          }
+
+          .content h1 {
+               font-size: 36px;
+               margin-bottom: 20px;
+          }
+
+          .delivery-status {
+               text-align: left;
+               display: inline-block;
+               margin-right: 50px;
+          }
+
+          .delivery-status h2 {
+               font-size: 24px;
+               margin-bottom: 10px;
+          }
+
+          .delivery-status ul {
+               list-style: none;
+               padding: 0;
+          }
+
+          .delivery-status li {
+               font-size: 18px;
+               margin-bottom: 10px;
+          }
+
+          .icon {
+               margin-right: 10px;
+          }
+
+          .cards {
+               display: inline-block;
+               text-align: left;
+          }
+
+          .card {
+               background-color: #f0f0f0;
+               padding: 20px;
+               margin-bottom: 20px;
+               border-radius: 10px;
+               width: 200px;
+          }
+
+          .card h3 {
+               font-size: 18px;
+               margin-bottom: 10px;
+          }
+
+          .card p {
+               font-size: 16px;
+               margin: 0;
+          }
+
+          /* Footer Styles */
+          .footer {
+               background-color: #e0e0e0;
+               padding: 20px;
+               text-align: center;
+          }
+
+          .contact-info p {
+               margin: 5px 0;
+          }
+
+          .social-icons {
+               font-size: 24px;
+          }
+
+          .social-icons i {
+               margin: 0 10px;
+               cursor: pointer;
+          }
+     </style>
+</head>
+
+<body>
+     <nav class="navbar">
+          <img src="https://placehold.co/50x50" alt="Logo" />
+          <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Promo</a></li>
+          </ul>
+          <button class="login-btn">Login</button>
+     </nav>
+
+     <main class="content">
+          <h1>Try our favorites</h1>
+          <section class="delivery-status">
+               <h2>Pengiriman</h2>
+               <ul>
+                    <li><span class="icon">✔️</span> Sedang dimasak</li>
+                    <li><span class="icon">✔️</span> Sedang di Bungkus</li>
+                    <li><span class="icon">🔴</span> Sedang di kirim</li>
+                    <li><span class="icon">🔴</span> Telah sampai di tempat tujuan</li>
+                    <li><span class="icon">🔴</span> Bukti Pengiriman</li>
+               </ul>
+          </section>
+
+          <section class="cards">
+               <div class="card">
+                    <img src="../dapoer/images/img (24).png" alt="image" width="200" height="180" srcset="">
+                    <h3>Chiken Katsu</h3>
+                    <p>2pcs x 1 box</p>
+               </div>
+               <div class="card">
+                    <img src="../dapoer/images/img (2).png" alt="image" width="200" height="180" srcset="">
+                    <h3>Chiken Hit Spicy</h3>
+                    <p>paha ayam, dada ayam</p>
+               </div>
+          </section>
+     </main>
+
+     <footer class="footer">
+          <div class="contact-info">
+               <p>Temukan Kami</p>
+               <p>No Telp: 0853-2132-1234</p>
+               <p>Email: DapoerAyam@contactmail.com</p>
+               <p>Alamat: Jl. Soekarno Hatta No.177 RT.19 RW.45</p>
+          </div>
+          <div class="social-icons">
+               <i class="fab fa-instagram"></i>
+               <i class="fab fa-facebook"></i>
+               <i class="fab fa-twitter"></i>
+               <i class="fab fa-youtube"></i>
+          </div>
+     </footer>
+</body>
+
+</html>
